@@ -15,10 +15,11 @@
         </a>
     </section>
     <h1>Résultats</h1>
-    <?php
-        session_start();
-        echo $_SESSION["response"];
-    ?>
+    <h2 class="thanks">Merci d'avoir participé à notre questionnaire !</h2>
+    <script>
+        var response = localStorage.getItem('response');
+        document.write(response)
+    </script>
     </div>
     <footer>
         <div class="socialnetwork">

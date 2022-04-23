@@ -1,3 +1,6 @@
+.disclaimer{
+    display:none;
+  }
 body{
     margin: 0;
     box-sizing: border-box;
@@ -215,7 +218,23 @@ margin-top: 50px;
 }
 
 .gagné{
-    background-color: green;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid green;
+    text-align: center;
+}
+.perdu{
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid red;
+    text-align: center;
+}
+.thanks{
+    background-color: #1f5f80;
+    color: white;
+    padding: 10px 20px;
 }
 
 /* CGU */

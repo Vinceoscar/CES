@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="marges">
     <?php
-        session_start();
+
 
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $questions1 = $_GET['q1'];
@@ -20,10 +19,18 @@
             $questions5 = $_GET['q5'];
 
             if(($questions1 === 'b') && ($questions2 === 'b') && ($questions3 === 'b') && ($questions4 === 'b') && ($questions5 === 'b')){
-                $_SESSION["response"]= '<div class="gagné">Félicitation ! Vous avez réussi le questionnaire !</div>';
-            }
-            else{
-                $_SESSION["response"]= "<div class="perdu">Malheureusement vous n'avez pas réussi le questionnaire </div>";
+            ?>
+            <script>
+                localStorage.setItem('response', '<div class="gagné">Félicitation ! Vous avez réussi le questionnaire !</div>');  
+            </script>
+            <?php
+                }
+                else{
+            ?>
+                <script>
+                    localStorage.setItem('response', '<div class="perdu">Malheureusement vous n\'avez pas réussi le questionnaire. R\éessayer !</div>');  
+                </script>
+            <?php
             }
 
         }
@@ -31,6 +38,8 @@
             echo 'console.log("dans le else")';
         }
     ?>
+
+<div class="marges">
 
     <section class="logo">
         <a href="index.html">
@@ -77,11 +86,11 @@
             <div class="rep">
                 <div class="groupyes">
                     <p class="yes">oui</p>
-                    <input type="radio" name="q1" value="b">
+                    <input type="radio" name="q2" value="b">
                 </div>
                 <div class="groupno">
                     <p class="no">non</p>
-                    <input type="radio" name="q1" value="b">
+                    <input type="radio" name="q2" value="b">
                 </div>
             </div>
         </div>
